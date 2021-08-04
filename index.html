@@ -21,14 +21,17 @@
   <link rel="stylesheet" href="css/rodape.css">    
   <link rel="stylesheet" href="css/dialogNewsletter.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width">
+
 </head>
 <body>
 
+  <a href="#conteudoPrincipal" class="pularNavegacao">Pular para Conteúdo Principal</a>
+
   <header class="cabecalho container">
-    <a href="#" class="cabecalho-logo" title="Logotipo da Apeperia">
+    <a href="#" class="cabecalho-logo" title="Home da Apeperia">
       <svg width="205" height="59" viewBox="0 0 205 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <title>Logotipo da Apeperia</title>
+          <title>Home da Apeperia</title>
           <!-- <desc>Logotipo da Apeperia</desc> -->
           <g id="Canvas" transform="translate(-2230 1001)">
             <g id="Logo do Apeperia">
@@ -63,10 +66,10 @@
     </nav>
   </header>
 
-  <main class="conteudo">
+  <main class="conteudo" role="main">
 
     <section class="secaoDestaque">
-      <h1 class="secaoDestaque-titulo">
+      <h1 class="secaoDestaque-titulo" id="conteudoPrincipal">
         APLICATIVOS NA MEDIDA
       </h1>
       <h2 class="secaoDestaque-texto">
@@ -111,12 +114,12 @@
 
     <section class="secaoSobre clearfix">
       <div class="container">
-        <img src="img/sobre-apeperia.png" class="secaoSobre-imgDestaque" alt="Dois homens um ao lado do outro e um deles esta escrevendo em quadro branco">
+        <img src="img/sobre-apeperia.png" class="secaoSobre-imgDestaque" alt="Dois homens concentrados um ao lado do outro idealizando um novo projeto e um deles esta escrevendo em quadro branco">
         <h2 class="secaoSobre-titulo tituloPadrao">
           SOBRE
         </h2>
         <p class="secaoSobre-texto">
-          Criamos aplicativos personalizados de maneira diferente e para <b>todxs</b>!
+          Criamos aplicativos personalizados de maneira diferente e para <b>todas as pessoas</b>!
         </p>
         <p class="secaoSobre-texto">
           Preocupados com o modelo atual em que um aplicativo é criado entregue e a manutenção é vista como um custo extra para o cliente, decidimos criar um novo modelo de negócio, em que você assina nosso serviço, nós criamos o aplicativo e a manutenção já é inclusa no serviço. Dessa maneira você não se preocupa com atualização, é tudo por nossa conta.
@@ -275,13 +278,14 @@
       <div class="container">
         <h2 class="secaoDestaques-titulo tituloPadrao">DESTAQUES</h2>
 
-        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
-            <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="Ferramentas de Designer. Ilustração">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
+        <a
+        href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link">
+          <figure class="secaoDestaques-destaque">
+            <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
               Conheça as primeiras etapas na criação de um logotipo
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
         <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link">
@@ -337,56 +341,56 @@
           </p>
 
           <div class="contatoCampo contatoCampo--sucesso">
-            <label>Nome: </label>
-            <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+            <label for="Nome">Nome: </label>
+            <input type="text" class="contatoCampo--validouFoi" placeholder="Digite seu nome completo" required>
           </div>  
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Email: </label>
-            <input type="email" class="contatoCampo--validouErro" required>
+            <label for= "Email">Email: </label>
+            <input type="email" class="contatoCampo--validouErro" placeholder= "Digite seu email" required>
             <span class="contatoCampo-msg contatoCampo-msg--erro">
               Você quis dizer <a href="#">gmail.com?</a>
             </span>
           </div>
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Telefone: </label>
+            <label for= "telefone">Telefone: </label>
             <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
             <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
           </div>     
 
           <div class="contatoCampo">
-            <label>CEP: </label>
+            <label for= "cep">CEP: </label>
             <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
           </div>
 
           <div class="contatoCampo">
-            <label>Endereço: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+            <label for= "endereço">Endereço: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
           </div>   
 
           <div class="contatoCampo">
-            <label>Bairro: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+            <label for= "bairro": </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
           </div>   
 
           <div class="contatoCampo">
             <label>Cidade: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
           </div>   
 
           <div class="contatoCampo">
-            <label>Estado: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+            <label for= "estado">Estado: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
           </div>   
 
           <div class="contatoCampo">
-            <label>Mensagem: </label>
+            <label for= "mensagem">Mensagem: </label>
             <textarea name="" cols="30" rows="10" required></textarea>
           </div>
 
           <div class="contatoCampo">
-            <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox">
+            <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox" id="receberEmail">
             <label class="contatoCampo-label">Receber destaques por email</label>
           </div>
 
@@ -423,7 +427,8 @@
           </p>
         </div>
 
-        <video src="img/formacao-java.mp4" class="secaoInstitucional-video">
+        <video src="img/formacao-java.mp4" class="secaoInstitucional-video" controls>
+          <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português (Brazil)">
         </video>
 
       </div>
